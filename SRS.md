@@ -92,7 +92,7 @@ Website InovasiTech Studio beroperasi secara independen di sisi klien (*front-en
 ```
 [Pengguna Membuka Web]
          │
-         ├──► DOMContentLoaded Event Dipicu (app.js)
+         ├──► DOMContentLoaded Event Dipicu (script.js)
          │         ├── initTheme()       -> Baca LocalStorage, pasang tema body & icon tombol
          │         ├── initPortfolio()   -> Fetch 'data/projects.json' (Fallback ke FALLBACK_PROJECTS)
          │         │                            └── renderProjects() -> Render kartu ke #portfolioGrid

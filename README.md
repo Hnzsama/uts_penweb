@@ -40,13 +40,13 @@ uts/
 │   ├── layout.css          # Variabel tema, reset, navbar, hero, grid & responsive
 │   ├── components.css      # Tombol, kartu proyek, search/filter, form & modal dialog
 │   └── style.css           # Master stylesheet yang mengimpor layout & components
-├── js/                     # JavaScript (Total < 140 baris)
-│   ├── script.js           # Master script yang menggabungkan seluruh modul interaktif
+├── js/                     # JavaScript Modular (ES Modules)
+│   ├── script.js           # Gerbang utama (Entry Point) pengimpor modul via ES Modules
 │   ├── theme.js            # Modul pengalih Dark/Light mode & LocalStorage
 │   ├── portfolio.js        # Modul AJAX Fetch JSON, DOM Render kartu, filter, search & modal
 │   ├── form.js             # Modul validasi formulir kontak real-time & pesan feedback
 │   ├── data.js             # Dataset fallback portofolio jika dibuka offline (file://)
-│   └── app.js              # Entry point inisialisasi modul
+│   └── app.js              # Modul navigasi menu responsif (hamburger toggle)
 ├── data/
 │   └── projects.json       # Berkas data JSON portofolio untuk konsumsi Fetch API
 ├── SRS.md                  # Dokumen Spesifikasi Kebutuhan Perangkat Lunak (IEEE 830)
@@ -62,11 +62,12 @@ uts/
 - Menggunakan tag semantik standar HTML5: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<dialog>`, dan `<footer>`.
 - Navigasi menu utama (`Beranda`, `Tentang Kami`, `Portofolio`, `Kontak`) yang responsif, terstruktur, dan mudah dipahami.
 - Konten informatif yang rapi dengan pemisahan seksi yang jelas (*clean, semantic, high readability*).
+- **Single Entry Point Clean Import:** `index.html` hanya mengimpor satu berkas CSS (`css/style.css`) dan satu berkas JS (`js/script.js` berjenis `type="module"`), menjaga tag `<head>` dan footer tetap ringkas dan elegan.
 
 ---
 
 ### 2. Desain CSS Modular & Estetika (Bobot: 30 + 20 = 50 Poin)
-- **Modular Architecture:** Kode CSS dibagi secara modular menjadi `css/layout.css` (tata letak & tema) dan `css/components.css` (komponen antarmuka), digabungkan rapi di `css/style.css`.
+- **Modular Architecture:** Kode CSS dibagi secara modular menjadi `css/layout.css` (tata letak & tema) dan `css/components.css` (komponen antarmuka), digabungkan rapi di gerbang utama `css/style.css` menggunakan `@import`.
 - **Desain Estetis & Kreativitas:** Tipografi modern Google Fonts *Plus Jakarta Sans*, gradien warna aura, kartu fitur *glassmorphism* dengan `backdrop-filter: blur()`, kartu portofolio berbingkai glow halus, serta micro-interactions hover yang dinamis.
 - **CSS Variables & Multi-Theme:** Mendukung Dark Mode (default) dan Light Mode dengan transisi warna yang sangat halus dan kontras sesuai standar WCAG AA.
 - **Tata Letak Responsif:** Menggunakan **CSS Grid** untuk portofolio dan fitur serta **Flexbox** untuk navbar, filter controls, dan formulir, adaptif di semua resolusi.
@@ -74,7 +75,7 @@ uts/
 ---
 
 ### 3. Fungsionalitas JavaScript Modular (Bobot: 20 Poin)
-Semua 5 pilar instruksi tugas UTS diimplementasikan secara terpisah dan mudah dijelaskan:
+Arsitektur JavaScript dirancang berbasis **ES Modules murni (Vanilla JS)**. Berkas `js/script.js` bertindak sebagai *hub entry point* yang mengimpor seluruh modul independen:
 
 | No | Kriteria Tugas | Berkas Modul | Penjelasan Singkat Kodingan |
 | :---: | :--- | :--- | :--- |
@@ -96,12 +97,13 @@ Semua 5 pilar instruksi tugas UTS diimplementasikan secara terpisah dan mudah di
 Jika dosen meminta Anda menunjukkan dan menjelaskan kodingan:
 
 1. **"Coba jelaskan kodingan AJAX-nya":**  
-   Buka berkas `js/portfolio.js` baris 10–19. Jelaskan bahwa fungsi `fetch("data/projects.json")` memuat data secara asinkron lalu memanggil `renderProjects(data)`.
+   Buka berkas `js/portfolio.js`. Jelaskan bahwa fungsi `fetch("data/projects.json")` memuat data secara asinkron lalu memanggil `renderProjects(data)`.
 2. **"Di mana manipulasi DOM kartu dan modal?":**  
-   Buka berkas `js/portfolio.js` pada fungsi `renderProjects` (baris 21–38) dan fungsi `openDetail` (baris 61–72). Jelaskan bagaimana data dipetakan ke elemen HTML kartu dan dialog modal.
+   Buka berkas `js/portfolio.js` pada fungsi `renderProjects` dan fungsi `openDetail`. Jelaskan bagaimana data dipetakan ke elemen HTML kartu dan dialog modal.
 3. **"Di mana validasi form?":**  
    Buka berkas `js/form.js`. Tunjukkan pemeriksaan `name.length < 3`, regex `emailRegex.test(email)`, dan `message.length < 5`.
 4. **"Bagaimana mode tema (Dark/Light) bekerja?":**  
    Buka berkas `js/theme.js`. Tunjukkan `document.body.classList.toggle("light-theme")` dan penyimpanan ke `localStorage.setItem("theme", ...)`.
-5. **"Bagaimana struktur CSS-nya?":**  
-   Tunjukkan bahwa CSS dipisah secara modular: `layout.css` untuk tata letak dan tema, serta `components.css` untuk tombol, kartu, dan formulir.
+5. **"Bagaimana struktur modularitas CSS & JavaScript-nya?":**  
+   • **CSS:** `index.html` hanya memuat `css/style.css` sebagai gerbang utama, yang di dalamnya mengimpor `layout.css` dan `components.css` via `@import`.  
+   • **JavaScript:** `index.html` hanya memuat `js/script.js` (`type="module"`), yang mengimpor seluruh modul (`theme.js`, `app.js`, `portfolio.js`, `form.js`) sehingga kode tetap rapi, terisolasi, dan mudah dirawat.
