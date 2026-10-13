@@ -40,12 +40,13 @@ uts/
 │   ├── layout.css          # Variabel tema, reset, navbar, hero, grid & responsive
 │   ├── components.css      # Tombol, kartu proyek, search/filter, form & modal dialog
 │   └── style.css           # Master stylesheet yang mengimpor layout & components
-├── js/                     # Modular JavaScript (Terpisah per fungsi, Total < 140 baris)
+├── js/                     # JavaScript (Total < 140 baris)
+│   ├── script.js           # Master script yang menggabungkan seluruh modul interaktif
 │   ├── theme.js            # Modul pengalih Dark/Light mode & LocalStorage
 │   ├── portfolio.js        # Modul AJAX Fetch JSON, DOM Render kartu, filter, search & modal
 │   ├── form.js             # Modul validasi formulir kontak real-time & pesan feedback
 │   ├── data.js             # Dataset fallback portofolio jika dibuka offline (file://)
-│   └── app.js              # Entry point utama yang menjalankan inisialisasi modul
+│   └── app.js              # Entry point inisialisasi modul
 ├── data/
 │   └── projects.json       # Berkas data JSON portofolio untuk konsumsi Fetch API
 ├── SRS.md                  # Dokumen Spesifikasi Kebutuhan Perangkat Lunak (IEEE 830)

@@ -5,7 +5,7 @@ function initForm() {
   if (!form) return;
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
