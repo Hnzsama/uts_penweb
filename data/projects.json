@@ -1,80 +1,30 @@
 [
   {
     "id": 1,
-    "title": "FinTech Banking Dashboard",
+    "title": "FinTech Banking App",
     "category": "web",
-    "categoryLabel": "Web Application",
-    "description": "Platform analitik finansial modern dengan visualisasi data real-time, manajemen portofolio kripto, dan sistem enkripsi end-to-end berstandar enterprise.",
-    "client": "PT Finansia Digital Indonesia",
-    "year": "2024",
-    "tech": ["HTML5", "CSS3", "JavaScript", "Chart.js"],
-    "badge": "Unggulan",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    "stats": "Peningkatan efisiensi operasional 45%"
+    "description": "Aplikasi dashboard finansial interaktif untuk analitik keuangan secara real-time.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": 2,
-    "title": "Aetheria Smart Home App",
+    "title": "Smart Home IoT",
     "category": "mobile",
-    "categoryLabel": "Mobile UI/UX",
-    "description": "Desain antarmuka aplikasi ekosistem Internet of Things (IoT) untuk kontrol pintar pencahayaan, keamanan, dan efisiensi konsumsi daya rumah.",
-    "client": "Aetheria IoT Corp",
-    "year": "2024",
-    "tech": ["Figma", "UI/UX", "CSS Grid", "Animations"],
-    "badge": "Terbaru",
-    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-    "stats": "Rating pengguna 4.9 / 5.0"
+    "description": "Antarmuka aplikasi kontrol perangkat rumah pintar dengan integrasi sensor IoT.",
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": 3,
-    "title": "Nusantara Coffee Brand Identity",
-    "category": "branding",
-    "categoryLabel": "Brand Identity",
-    "description": "Perancangan identitas merek komprehensif mulai dari logo, palet warna, sistem kemasan ramah lingkungan hingga platform e-katalog kopi premium lokal.",
-    "client": "Kopi Nusantara Roastery",
-    "year": "2023",
-    "tech": ["Branding", "SVG Vector", "Typography", "CSS"],
-    "badge": "Populer",
-    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
-    "stats": "Pertumbuhan penjualan 120%"
+    "title": "Nusantara Coffee Brand",
+    "category": "desain",
+    "description": "Identitas visual dan katalog digital produk kopi nusantara ramah lingkungan.",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": 4,
-    "title": "MedikaCare Telemedicine Portal",
+    "title": "Telemedicine Care Portal",
     "category": "web",
-    "categoryLabel": "Web Application",
-    "description": "Sistem informasi layanan kesehatan digital terintegrasi dengan penjadwalan temu dokter online, rekam medis digital, dan resep elektronik cepat.",
-    "client": "Rumah Sakit Medika Utama",
-    "year": "2024",
-    "tech": ["HTML5", "Vanilla JS", "REST API", "Responsive CSS"],
-    "badge": "Unggulan",
-    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-    "stats": "50.000+ Konsultasi Pasien"
-  },
-  {
-    "id": 5,
-    "title": "EduLearn Interactive Learning LMS",
-    "category": "web",
-    "categoryLabel": "Web Application",
-    "description": "Portal pembelajaran digital interaktif berbasis gamifikasi dan kuis adaptif untuk mendukung pendidikan vokasi di era industri 4.0.",
-    "client": "EduLearn Akademi",
-    "year": "2024",
-    "tech": ["JavaScript", "HTML5 Canvas", "CSS Flexbox", "AJAX"],
-    "badge": "Inovasi",
-    "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80",
-    "stats": "Aktif di 30+ Kampus"
-  },
-  {
-    "id": 6,
-    "title": "EcoBumi Sustainability Dashboard",
-    "category": "branding",
-    "categoryLabel": "Brand Identity",
-    "description": "Visualisasi data emisi karbon korporasi dan platform monitoring inisiatif penanaman pohon mangrove berskala nasional.",
-    "client": "Yayasan Konservasi Nusantara",
-    "year": "2023",
-    "tech": ["Design System", "CSS Variables", "Interactive DOM"],
-    "badge": "CSR Award",
-    "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
-    "stats": "Netralisasi 10.000 Ton CO2"
+    "description": "Portal layanan konsultasi dokter online dan rekam medis digital pasien.",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80"
   }
 ]

@@ -1,552 +1,154 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="InovasiTech Studio - Agensi kreatif digital terdepan yang menghadirkan solusi web inovatif, desain UI/UX kelas dunia, dan transformasi digital.">
-  <meta name="keywords" content="pemrograman web, UTS, InovasiTech, portofolio digital, frontend, HTML, CSS, JavaScript">
-  <meta name="author" content="Luqman Bil As'har (NIM: 25091397086, Kelas: 2025I) - Sarjana Terapan Manajemen Informatika">
-  <title>InovasiTech Studio — Luqman Bil As'har (25091397086 / 2025I)</title>
-
-  <!-- Google Fonts: Plus Jakarta Sans -->
+  <title>InovasiTech Studio — Luqman Bil As'har (25091397086)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome 6 Icon Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-  <!-- Header & Navigation Bar -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-container">
-      <a href="#beranda" class="brand-logo" aria-label="Beranda InovasiTech Studio">
-        <i class="fa-solid fa-bolt-lightning logo-icon" aria-hidden="true"></i>
-        <span class="logo-text">Inovasi<span class="text-gradient">Tech</span></span>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#beranda" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">InovasiTech</span>
       </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="main-nav" id="mainNav" aria-label="Navigasi Utama">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#beranda" class="nav-link active">Beranda</a></li>
-          <li class="nav-item"><a href="#tentang" class="nav-link">Tentang Kami</a></li>
-          <li class="nav-item"><a href="#layanan" class="nav-link">Layanan</a></li>
-          <li class="nav-item"><a href="#portofolio" class="nav-link">Portofolio</a></li>
-          <li class="nav-item"><a href="#kontak" class="nav-link">Kontak</a></li>
-        </ul>
-      </nav>
-
-      <!-- Action Buttons & Theme Switcher -->
-      <div class="header-actions">
-        <button id="themeToggle" class="btn-icon theme-toggle-btn" aria-label="Ganti mode tampilan tema" title="Ganti Mode Gelap/Terang">
-          <i class="fa-solid fa-sun theme-icon light-icon" aria-hidden="true"></i>
-          <i class="fa-solid fa-moon theme-icon dark-icon" aria-hidden="true"></i>
-        </button>
-
-        <a href="#kontak" class="btn btn-primary btn-sm header-cta">Konsultasi</a>
-
-        <!-- Mobile Menu Toggle Hamburger -->
-        <button id="mobileMenuBtn" class="hamburger-btn" aria-label="Buka Menu Navigasi" aria-expanded="false" aria-controls="mobileDrawer">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer Navigation -->
-    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
-      <ul class="mobile-nav-list">
-        <li><a href="#beranda" class="mobile-nav-link active">Beranda</a></li>
-        <li><a href="#tentang" class="mobile-nav-link">Tentang Kami</a></li>
-        <li><a href="#layanan" class="mobile-nav-link">Layanan</a></li>
-        <li><a href="#portofolio" class="mobile-nav-link">Portofolio</a></li>
-        <li><a href="#kontak" class="mobile-nav-link">Kontak</a></li>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#portofolio">Portofolio</a></li>
+        <li><a href="#kontak">Kontak</a></li>
       </ul>
-      <div class="mobile-drawer-footer">
-        <a href="#kontak" class="btn btn-primary btn-block">Mulai Proyek Anda</a>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-btn" title="Ganti Tema" aria-label="Ganti Tema">🌙</button>
+        <button id="navToggle" class="nav-toggle" aria-label="Menu Navigasi">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- Main Content Area -->
-  <main id="mainContent">
-
-    <!-- Hero Section -->
-    <section class="hero-section" id="beranda">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="badge-pill">
-            <span class="badge-dot"></span>
-            <span>Luqman Bil As'har &bull; NIM 25091397086 &bull; Kelas 2025I</span>
-          </div>
-
-          <h1 class="hero-title">
-            Wujudkan Ekosistem Digital Berkinerja Tinggi &amp; <span class="text-gradient">Estetis</span>
-          </h1>
-
-          <p class="hero-description">
-            InovasiTech Studio merancang dan mengembangkan produk web modern, aplikasi responsif, serta identitas digital dengan standar kode bersih dan arsitektur mutakhir.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#portofolio" class="btn btn-primary btn-lg">
-              <span>Jelajahi Proyek</span>
-              <i class="fa-solid fa-arrow-right icon-arrow"></i>
-            </a>
-            <a href="#tentang" class="btn btn-outline btn-lg">Tentang Studio</a>
-          </div>
-
-          <!-- Hero Metrics / Counters -->
-          <div class="hero-metrics">
-            <div class="metric-item">
-              <span class="metric-number" data-target="98">0</span><span class="metric-suffix">%</span>
-              <span class="metric-label">Kepuasan Klien</span>
-            </div>
-            <div class="metric-divider"></div>
-            <div class="metric-item">
-              <span class="metric-number" data-target="45">0</span><span class="metric-suffix">+</span>
-              <span class="metric-label">Proyek Selesai</span>
-            </div>
-            <div class="metric-divider"></div>
-            <div class="metric-item">
-              <span class="metric-number" data-target="15">0</span><span class="metric-suffix">+</span>
-              <span class="metric-label">Penghargaan Desain</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-visual">
-          <div class="glass-card hero-showcase-card">
-            <div class="code-preview-header">
-              <div class="window-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-              <span class="code-filename">InovasiTechApp.js</span>
-            </div>
-            <div class="code-body">
-              <p><span class="c-keyword">const</span> <span class="c-var">studio</span> = <span class="c-keyword">new</span> <span class="c-fn">InovasiTechStudio</span>({</p>
-              <p class="indent-1"><span class="c-prop">standard</span>: <span class="c-str">"HTML5 + CSS3 + Vanilla JS"</span>,</p>
-              <p class="indent-1"><span class="c-prop">performance</span>: <span class="c-str">"Optimized &amp; High-Speed"</span>,</p>
-              <p class="indent-1"><span class="c-prop">aesthetics</span>: <span class="c-str">"Ultra Modern Glassmorphism"</span>,</p>
-              <p class="indent-1"><span class="c-prop">interactivity</span>: [<span class="c-str">"AJAX"</span>, <span class="c-str">"DOM"</span>, <span class="c-str">"Events"</span>, <span class="c-str">"Validation"</span>]</p>
-              <p>});</p>
-              <p class="c-comment">// Sistem siap diluncurkan ke GitHub Pages 🚀</p>
-              <p><span class="c-var">studio</span>.<span class="c-fn">launchSuccess</span>();</p>
-            </div>
-            <div class="card-glow-effect"></div>
-          </div>
+  <main>
+    <section id="beranda" class="hero">
+      <div class="container hero-content">
+        <div class="hero-badge">🚀 Agensi Digital &amp; Portofolio Interaktif</div>
+        <h1 class="hero-title">Membangun Pengalaman Digital yang Inovatif &amp; Berkelas</h1>
+        <p class="hero-subtitle">Portofolio agensi web interaktif berbasis HTML5 Semantik, Desain CSS Modern Modular, dan JavaScript Vanilla murni dengan 5 pilar interaksi lengkap.</p>
+        <div class="hero-cta">
+          <a href="#portofolio" class="btn btn-primary">Eksplorasi Proyek</a>
+          <a href="#tentang" class="btn btn-secondary">Tentang Kami</a>
         </div>
       </div>
     </section>
 
-    <!-- Tentang Kami Section -->
-    <section class="section about-section" id="tentang">
+    <section id="tentang" class="section">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">Profil &amp; Filosofi</span>
-          <h2 class="section-title">Tentang <span class="text-gradient">InovasiTech</span> Studio</h2>
-          <p class="section-subtitle">
-            Membangun masa depan web melalui kolaborasi kreativitas tanpa batas, rekayasa kode presisi, dan fokus total pada kenyamanan pengguna.
-          </p>
+        <div class="section-header">
+          <span class="section-badge">Tentang Kami</span>
+          <h2 class="section-title">Dedikasi Pada Rekayasa Web Berkualitas</h2>
+          <p class="section-desc">InovasiTech Studio menghadirkan standar rekayasa perangkat lunak web modern yang menggabungkan performa secepat kilat, estetika visual mutakhir, dan aksesibilitas ramah pengguna.</p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-story-card glass-card">
-            <h3 class="story-title">Dedikasi Terhadap Rekayasa Web Berkualitas</h3>
-            <p>
-              Didirikan sebagai inisiatif digital mahasiswa Sarjana Terapan Manajemen Informatika, InovasiTech Studio berfokus pada pengembangan antarmuka web modern yang mengedepankan performa tinggi, aksesibilitas, serta keindahan visual.
-            </p>
-            <p>
-              Kami mengintegrasikan prinsip-prinsip <em>semantic HTML</em>, arsitektur <em>clean CSS modular</em>, dan interaktivitas dinamis berbasis <em>JavaScript murni (Vanilla JS)</em> tanpa ketergantungan pustaka eksternal yang memberatkan.
-            </p>
-
-            <div class="values-checklist">
-              <div class="value-item">
-                <span class="check-icon"><i class="fa-solid fa-check"></i></span>
-                <div>
-                  <strong>Standar Kode Teruji:</strong> Validasi penuh HTML5 dan CSS W3C.
-                </div>
-              </div>
-              <div class="value-item">
-                <span class="check-icon"><i class="fa-solid fa-check"></i></span>
-                <div>
-                  <strong>Interaktivitas Cepat:</strong> DOM Manipulation dan AJAX responsif.
-                </div>
-              </div>
-              <div class="value-item">
-                <span class="check-icon"><i class="fa-solid fa-check"></i></span>
-                <div>
-                  <strong>Keamanan &amp; Validasi:</strong> Pemeriksaan form menyeluruh di sisi klien.
-                </div>
-              </div>
-            </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Performa Tinggi</h3>
+            <p>Dibangun dengan Vanilla HTML, CSS, dan JS murni tanpa bloatware pustaka luar, menghasilkan waktu muat seketika dan efisiensi memori maksimal.</p>
           </div>
-
-          <!-- Interactive Values Cards -->
-          <div class="about-pillars">
-            <div class="pillar-card glass-card">
-              <div class="pillar-icon"><i class="fa-solid fa-bullseye"></i></div>
-              <h4 class="pillar-title">Misi Kami</h4>
-              <p class="pillar-desc">
-                Menghadirkan solusi digital yang tidak hanya memukau secara visual, namun juga terstruktur kokoh dengan fondasi rekayasa perangkat lunak yang sistematis.
-              </p>
-            </div>
-
-            <div class="pillar-card glass-card">
-              <div class="pillar-icon"><i class="fa-solid fa-bolt"></i></div>
-              <h4 class="pillar-title">Kecepatan &amp; Aksesibilitas</h4>
-              <p class="pillar-desc">
-                Mengutamakan waktu muat secepat kilat dengan rasio kontras warna standar WCAG agar ramah bagi seluruh pengguna di berbagai perangkat.
-              </p>
-            </div>
-
-            <div class="pillar-card glass-card">
-              <div class="pillar-icon"><i class="fa-solid fa-lightbulb"></i></div>
-              <h4 class="pillar-title">Inovasi Berkelanjutan</h4>
-              <p class="pillar-desc">
-                Terus mengadopsi standar web terkini, mulai dari CSS Custom Properties, flexbox/grid dinamis, hingga Fetch API asinkron.
-              </p>
-            </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Desain Estetis &amp; Adaptif</h3>
+            <p>Tata letak responsif dengan CSS Grid dan Flexbox, tipografi modern Plus Jakarta Sans, efek glassmorphism, serta dukungan Dark dan Light Mode.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3>5 Pilar Interaktivitas</h3>
+            <p>Mengintegrasikan Event Handling, DOM Manipulation, Style &amp; Animation, Form Validation, dan AJAX Fetch API secara modular dan teruji.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Layanan Kami Section -->
-    <section class="section services-section" id="layanan">
+    <section id="portofolio" class="section">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">Kapabilitas Kami</span>
-          <h2 class="section-title">Layanan Unggulan yang Kami <span class="text-gradient">Tawarkan</span></h2>
-          <p class="section-subtitle">
-            Layanan komprehensif mulai dari perancangan arsitektur antarmuka hingga implementasi kode siap produksi.
-          </p>
+        <div class="section-header">
+          <span class="section-badge">Portofolio Unggulan</span>
+          <h2 class="section-title">Koleksi Proyek Terbaru</h2>
+          <p class="section-desc">Jelajahi inovasi digital kami yang diambil secara asinkron (AJAX) dengan fitur penyaringan kategori dan pencarian instan.</p>
         </div>
 
-        <div class="services-grid">
-          <article class="service-card glass-card">
-            <div class="service-icon-box"><i class="fa-solid fa-code"></i></div>
-            <h3 class="service-card-title">Front-End Development</h3>
-            <p class="service-card-desc">
-              Pengembangan antarmuka menggunakan HTML5 semantik, CSS modern dengan variabel dinamis, serta vanilla JavaScript untuk interaksi yang ringan dan tangguh.
-            </p>
-            <ul class="service-feature-list">
-              <li>Semantic Layout</li>
-              <li>Responsive Design (Mobile-First)</li>
-              <li>Clean Architecture</li>
-            </ul>
-          </article>
-
-          <article class="service-card glass-card">
-            <div class="service-icon-box"><i class="fa-solid fa-bezier-curve"></i></div>
-            <h3 class="service-card-title">UI/UX &amp; Interaction Design</h3>
-            <p class="service-card-desc">
-              Perancangan sistem visual berkelas dengan konsep glassmorphism, micro-animations, dan transisi halus yang meningkatkan kenyamanan berinteraksi.
-            </p>
-            <ul class="service-feature-list">
-              <li>Design Tokens &amp; Themes</li>
-              <li>Micro-Interactions</li>
-              <li>Design System Guidelines</li>
-            </ul>
-          </article>
-
-          <article class="service-card glass-card">
-            <div class="service-icon-box"><i class="fa-solid fa-gauge-high"></i></div>
-            <h3 class="service-card-title">Web Performance &amp; AJAX</h3>
-            <p class="service-card-desc">
-              Integrasi asinkron data menggunakan Fetch API tanpa reload halaman, optimalisasi aset, dan penanganan status pemuatan secara elegan.
-            </p>
-            <ul class="service-feature-list">
-              <li>Asynchronous Fetch Data</li>
-              <li>Dynamic DOM Rendering</li>
-              <li>Real-time Search &amp; Filter</li>
-            </ul>
-          </article>
+        <div class="controls">
+          <div class="search-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" class="search-input" placeholder="Cari nama atau deskripsi proyek...">
+          </div>
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="desain">Desain</button>
+          </div>
         </div>
+
+        <div class="grid" id="portfolioGrid"></div>
       </div>
     </section>
 
-    <!-- Portofolio Section (Dynamic AJAX + DOM Manipulation + Filter + Search) -->
-    <section class="section portfolio-section" id="portofolio">
+    <dialog id="projectModal" class="project-modal">
+      <div class="modal-card">
+        <button id="modalClose" class="modal-close" aria-label="Tutup Detail">&times;</button>
+        <div id="modalBody"></div>
+      </div>
+    </dialog>
+
+    <section id="kontak" class="section">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">Karya Terkini</span>
-          <h2 class="section-title">Portofolio &amp; Showcase <span class="text-gradient">Proyek</span></h2>
-          <p class="section-subtitle">
-            Data proyek dimuat secara dinamis melalui <strong>AJAX / Fetch API</strong> dari file JSON lokal dengan fitur filter kategori interaktif dan pencarian real-time.
-          </p>
+        <div class="section-header">
+          <span class="section-badge">Hubungi Kami</span>
+          <h2 class="section-title">Mari Berkolaborasi</h2>
+          <p class="section-desc">Punya ide proyek atau pertanyaan seputar pengembangan web? Kirimkan pesan Anda melalui formulir di bawah ini.</p>
         </div>
 
-        <!-- Controls: Search Input & Category Filters -->
-        <div class="portfolio-controls">
-          <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
-            <input type="text" id="projectSearchInput" class="search-input" placeholder="Cari nama proyek atau teknologi..." aria-label="Cari proyek dalam portofolio">
-            <button id="clearSearchBtn" class="clear-search-btn" title="Hapus pencarian" style="display: none;">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div id="formFeedback" class="feedback-box"></div>
+
+          <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" placeholder="Masukkan nama Anda (min. 3 karakter)" required>
           </div>
 
-          <div class="filter-buttons" id="filterButtonGroup" role="group" aria-label="Filter Kategori Proyek">
-            <button type="button" class="filter-btn active" data-filter="all">Semua Proyek</button>
-            <button type="button" class="filter-btn" data-filter="web">Web Application</button>
-            <button type="button" class="filter-btn" data-filter="mobile">Mobile UI/UX</button>
-            <button type="button" class="filter-btn" data-filter="branding">Brand Identity</button>
+          <div class="form-group">
+            <label for="email">Alamat Email</label>
+            <input type="email" id="email" placeholder="nama@domain.com" required>
           </div>
-        </div>
 
-        <!-- Projects Grid Container (Dynamically Populated via JS) -->
-        <div class="portfolio-grid" id="portfolioGrid" aria-live="polite">
-          <!-- Skeleton Loading placeholder displayed while fetching -->
-          <div class="portfolio-loading" id="portfolioLoading">
-            <div class="spinner"></div>
-            <p>Memuat portofolio melalui Fetch API...</p>
+          <div class="form-group">
+            <label for="message">Pesan Anda</label>
+            <textarea id="message" rows="4" placeholder="Tuliskan pesan Anda secara jelas (min. 5 karakter)..." required></textarea>
           </div>
-        </div>
 
-        <!-- Empty State (when search / filter yields 0 results) -->
-        <div class="empty-state" id="portfolioEmptyState" style="display: none;">
-          <div class="empty-icon"><i class="fa-regular fa-folder-open"></i></div>
-          <h3>Proyek Tidak Ditemukan</h3>
-          <p>Coba kata kunci lain atau ubah kategori filter Anda.</p>
-          <button id="resetFilterBtn" class="btn btn-outline btn-sm">Reset Filter</button>
-        </div>
+          <button type="submit" class="btn btn-primary btn-block">Kirim Pesan Sekarang</button>
+        </form>
       </div>
     </section>
-
-    <!-- Interactive Quotes / Live Inspiration Section (Demonstrating Secondary AJAX) -->
-    <section class="section quote-section">
-      <div class="container text-center">
-        <div class="quote-card glass-card">
-          <span class="quote-badge"><i class="fa-solid fa-lightbulb"></i> Inspirasi Rekayasa Perangkat Lunak</span>
-          <blockquote class="quote-text" id="quoteText">
-            "Kualitas sebuah perangkat lunak tercermin dari kerapian strukturnya, keindahan kodenya, dan kemudahan pengguna dalam menikmatinya."
-          </blockquote>
-          <cite class="quote-author" id="quoteAuthor">— InovasiTech Engineering Team</cite>
-          <div class="quote-actions">
-            <button id="newQuoteBtn" class="btn btn-outline btn-sm">
-              <i class="fa-solid fa-arrows-rotate spin-icon"></i> Ganti Kutipan (Fetch Dynamic)
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Formulir Kontak Section (Form Validation, Event Handling, Feedback) -->
-    <section class="section contact-section" id="kontak">
-      <div class="container">
-        <div class="contact-wrapper glass-card">
-          <div class="contact-info">
-            <span class="section-tag">Hubungi Kami</span>
-            <h2 class="contact-info-title">Mari Wujudkan Ide Digital Anda</h2>
-            <p class="contact-info-desc">
-              Punya pertanyaan seputar layanan kami atau ingin mendiskusikan kolaborasi tugas akhir &amp; proyek? Isi formulir di samping untuk terhubung langsung dengan tim kami.
-            </p>
-
-            <div class="info-items">
-              <div class="info-item">
-                <span class="info-icon"><i class="fa-solid fa-user-graduate"></i></span>
-                <div>
-                  <strong>Pengembang / Mahasiswa:</strong>
-                  <p>Luqman Bil As'har &bull; Kelas 2025I (NIM: 25091397086)</p>
-                </div>
-              </div>
-              <div class="info-item">
-                <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
-                <div>
-                  <strong>Kampus / Lokasi:</strong>
-                  <p>Surabaya, Jawa Timur, Indonesia</p>
-                </div>
-              </div>
-              <div class="info-item">
-                <span class="info-icon"><i class="fa-solid fa-envelope"></i></span>
-                <div>
-                  <strong>Email Resmi:</strong>
-                  <p>kontak@inovasitech.id</p>
-                </div>
-              </div>
-              <div class="info-item">
-                <span class="info-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-                <div>
-                  <strong>Mata Kuliah:</strong>
-                  <p>Pemrograman Web (UTS MI - Semester 3)</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-badges">
-              <span class="mini-tag"><i class="fa-solid fa-bolt"></i> Fast Response</span>
-              <span class="mini-tag"><i class="fa-solid fa-shield-halved"></i> Form Validation</span>
-              <span class="mini-tag"><i class="fa-brands fa-github"></i> Ready GitHub Pages</span>
-            </div>
-          </div>
-
-          <div class="contact-form-container">
-            <form id="contactForm" class="contact-form" novalidate>
-              <div class="form-title-group">
-                <h3 class="form-title">Kirim Pesan Konsultasi</h3>
-                <p class="form-subtitle">Dilengkapi validasi real-time di sisi client menggunakan JavaScript.</p>
-              </div>
-
-              <!-- Nama Lengkap Field -->
-              <div class="form-group" id="groupName">
-                <label for="inputName" class="form-label">
-                  Nama Lengkap <span class="required">*</span>
-                </label>
-                <div class="input-wrapper">
-                  <input type="text" id="inputName" name="name" class="form-input" placeholder="Masukkan nama lengkap Anda" required minlength="3">
-                  <span class="input-status-icon" aria-hidden="true"></span>
-                </div>
-                <div class="error-message" id="errorName">Nama wajib diisi minimal 3 karakter huruf.</div>
-              </div>
-
-              <!-- Email Field -->
-              <div class="form-group" id="groupEmail">
-                <label for="inputEmail" class="form-label">
-                  Alamat Email <span class="required">*</span>
-                </label>
-                <div class="input-wrapper">
-                  <input type="email" id="inputEmail" name="email" class="form-input" placeholder="contoh@domain.com" required>
-                  <span class="input-status-icon" aria-hidden="true"></span>
-                </div>
-                <div class="error-message" id="errorEmail">Format email tidak valid (harus mengandung @ dan domain).</div>
-              </div>
-
-              <!-- Pilihan Layanan / Subjek -->
-              <div class="form-group" id="groupService">
-                <label for="selectService" class="form-label">
-                  Pilih Layanan / Topik <span class="required">*</span>
-                </label>
-                <div class="input-wrapper">
-                  <select id="selectService" name="service" class="form-select" required>
-                    <option value="" disabled selected>Pilih salah satu layanan...</option>
-                    <option value="frontend">Pengembangan Front-End Website</option>
-                    <option value="uiux">Perancangan UI/UX &amp; Prototype</option>
-                    <option value="consultation">Konsultasi Arsitektur Web</option>
-                    <option value="other">Lainnya / Kolaborasi Akademik</option>
-                  </select>
-                </div>
-                <div class="error-message" id="errorService">Silakan pilih layanan yang diinginkan.</div>
-              </div>
-
-              <!-- Pesan Field with Live Character Counter -->
-              <div class="form-group" id="groupMessage">
-                <div class="label-with-counter">
-                  <label for="inputMessage" class="form-label">
-                    Pesan Anda <span class="required">*</span>
-                  </label>
-                  <span class="char-counter" id="charCounter">0 / 250 karakter min</span>
-                </div>
-                <div class="input-wrapper">
-                  <textarea id="inputMessage" name="message" class="form-textarea" rows="4" placeholder="Tuliskan kebutuhan proyek atau pertanyaan Anda (minimal 10 karakter)..." required minlength="10"></textarea>
-                </div>
-                <div class="error-message" id="errorMessage">Pesan wajib diisi minimal 10 karakter.</div>
-              </div>
-
-              <!-- Agreement Checkbox -->
-              <div class="form-group checkbox-group" id="groupAgree">
-                <label class="checkbox-container">
-                  <input type="checkbox" id="checkAgree" name="agreement" required>
-                  <span class="custom-checkbox"></span>
-                  <span class="checkbox-label-text">
-                    Saya menyetujui bahwa data ini digunakan untuk keperluan komunikasi tugas UTS.
-                  </span>
-                </label>
-                <div class="error-message" id="errorAgree">Anda harus mencentang persetujuan ini sebelum mengirimkan pesan.</div>
-              </div>
-
-              <!-- Form Submit Button with Loading Spinner -->
-              <button type="submit" id="submitBtn" class="btn btn-primary btn-block">
-                <span class="btn-text">Kirim Pesan Sekarang</span>
-                <span class="btn-spinner" aria-hidden="true" style="display: none;"></span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- Project Detail Modal Dialog -->
-  <dialog class="modal-dialog" id="projectModal" aria-labelledby="modalTitle" aria-hidden="true">
-    <div class="modal-card">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Tutup Dialog Detail Proyek">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <div class="modal-body" id="modalBody">
-        <!-- Content injected dynamically via JavaScript DOM manipulation -->
-      </div>
-    </div>
-  </dialog>
-
-  <!-- Toast Notification Container -->
-  <div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
-
-  <!-- Back to Top Button -->
-  <button id="backToTopBtn" class="back-to-top" aria-label="Kembali ke atas halaman" title="Kembali ke atas">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container footer-container">
-      <div class="footer-brand">
-        <a href="#beranda" class="brand-logo">
-          <i class="fa-solid fa-bolt-lightning logo-icon" aria-hidden="true"></i>
-          <span class="logo-text">Inovasi<span class="text-gradient">Tech</span></span>
-        </a>
-        <p class="footer-desc">
-          Website tugas proyek Ujian Tengah Semester (UTS) mata kuliah Pemrograman Web — D4 Manajemen Informatika.
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <h4 class="footer-heading">Navigasi Cepat</h4>
-        <ul>
-          <li><a href="#beranda">Beranda</a></li>
-          <li><a href="#tentang">Tentang Kami</a></li>
-          <li><a href="#layanan">Layanan</a></li>
-          <li><a href="#portofolio">Portofolio</a></li>
-          <li><a href="#kontak">Kontak</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4 class="footer-heading">Identitas Mahasiswa</h4>
-        <ul>
-          <li><strong>Nama:</strong> Luqman Bil As'har</li>
-          <li><strong>NIM:</strong> 25091397086</li>
-          <li><strong>Kelas:</strong> 2025I</li>
-          <li><strong>Prodi:</strong> D4 Manajemen Informatika</li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4 class="footer-heading">Dosen Pengampu</h4>
-        <ul>
-          <li>Ari Kurniawan, S.Kom., M.T.</li>
-          <li>Faris Abdi El Hakim, S.Kom., M.Tr.Kom.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container footer-bottom-container">
-        <p>&copy; 2024 InovasiTech Studio. Dibuat oleh <strong>Luqman Bil As'har (NIM: 25091397086 / 2025I)</strong>.</p>
-        <p class="footer-tech-stack">Hosted on GitHub Pages &bull; W3C Standard Compliant</p>
-      </div>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-copy">&copy; 2024 <strong>InovasiTech Studio</strong>. Dibuat untuk UTS Pemrograman Web oleh <strong>Luqman Bil As'har</strong> (NIM: <strong>25091397086</strong> / Kelas: <strong>2025I</strong>).</p>
+      <p class="footer-note">Sarjana Terapan (D4) Manajemen Informatika — Dosen: Ari Kurniawan, S.Kom., M.T. &amp; Faris Abdi El Hakim, S.Kom., M.Tr.Kom.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/form.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

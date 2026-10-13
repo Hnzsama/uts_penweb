@@ -1,137 +1,106 @@
 # 🚀 Proyek UTS Pemrograman Web — InovasiTech Studio
 
-> **Website Portofolio & Agensi Digital Interaktif berbasis HTML5 Semantik, Desain CSS Modern (Glassmorphism & Multi-Theme), dan JavaScript Murni (Vanilla JS).**
+> **Website Portofolio Interaktif berbasis HTML5 Semantik, Desain CSS Modular, dan JavaScript Murni (Vanilla JS) yang Ringkas, Bersih, dan Mudah Didemokan.**
 
 ---
 
-## 📌 Identitas Proyek & Akademik
+## 📌 Identitas Proyek & Mahasiswa
 
 - **Mata Kuliah:** Pemrograman Web (UTS)
 - **Program Studi / Semester:** Sarjana Terapan (D4) Manajemen Informatika / Semester 3
 - **Bobot SKS:** 4 SKS
 - **Dosen Pengampu:**
-- **Pengembang (Mahasiswa):**
+  1. Ari Kurniawan, S.Kom., M.T.
+  2. Faris Abdi El Hakim, S.Kom., M.Tr.Kom.
+- **Penyusun:**
   - **Nama:** **Luqman Bil As'har**
   - **NIM:** **25091397086**
   - **Kelas:** **2025I**
-  - **Program Studi:** Sarjana Terapan (D4) Manajemen Informatika
-- **Dokumen Terkait:** [Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SRS.md)](SRS.md)
+- **Dokumen Pendukung:** [Dokumen SRS (SRS.md)](SRS.md)
 
 ---
 
-## 🌐 Tautan Live Demo & Akses Halaman Web
+## 🌐 Tautan Live Demo & Repositori
 
-Website ini telah disiapkan dan di-deploy pada **GitHub Pages**:
-
-- **Alamat Domain / URL GitHub Pages:**  
+- **URL GitHub Pages:**  
   [https://hnzsama.github.io/uts_penweb/](https://hnzsama.github.io/uts_penweb/)
 - **URL Repositori GitHub:**  
   [https://github.com/Hnzsama/uts_penweb](https://github.com/Hnzsama/uts_penweb)
 
-### ⚙️ Panduan Menghidupkan GitHub Pages di Repositori:
-1. *Push* seluruh berkas proyek ke repositori GitHub Anda di cabang `main`.
-2. Buka menu **Settings** pada repositori GitHub Anda.
-3. Pilih menu tab **Pages** pada bilah sisi kiri (*sidebar*).
-4. Di bagian **Build and deployment > Source**, pilih opsi **Deploy from a branch**.
-5. Pilih *Branch*: `main` dan folder: `/ (root)`, lalu klik tombol **Save**.
-6. Tunggu sekitar 1–2 menit, tautan publik website Anda akan aktif dan dapat langsung diakses oleh dosen pengampu.
-
 ---
 
-## 🗂️ Struktur Direktori Proyek
+## 🗂️ Struktur Direktori Proyek (Modular & Ringkas)
+
+Proyek ini sengaja dibuat **sesimpel dan semodular mungkin** (*clean & concise code*) agar sangat mudah dijelaskan dan didemokan baris demi baris di depan dosen penguji:
 
 ```text
 uts/
-├── index.html              # Berkas dokumen utama antarmuka HTML5 semantik
-├── css/
-│   └── style.css           # Lembar gaya CSS3 modular, Design Tokens, & Dark/Light mode
-├── js/
-│   ├── app.js              # Logika JavaScript murni (Events, DOM, Form, AJAX, Animasi)
-│   └── data.js             # Dataset fallback (offline protection) & kumpulan kutipan
+├── index.html              # Antarmuka utama (HTML5 Semantik, ~85 baris)
+├── css/                    # Modular CSS (Total < 160 baris)
+│   ├── layout.css          # Variabel tema, reset, navbar, hero, grid & responsive
+│   ├── components.css      # Tombol, kartu proyek, search/filter, form & modal dialog
+│   └── style.css           # Master stylesheet yang mengimpor layout & components
+├── js/                     # Modular JavaScript (Terpisah per fungsi, Total < 140 baris)
+│   ├── theme.js            # Modul pengalih Dark/Light mode & LocalStorage
+│   ├── portfolio.js        # Modul AJAX Fetch JSON, DOM Render kartu, filter, search & modal
+│   ├── form.js             # Modul validasi formulir kontak real-time & pesan feedback
+│   ├── data.js             # Dataset fallback portofolio jika dibuka offline (file://)
+│   └── app.js              # Entry point utama yang menjalankan inisialisasi modul
 ├── data/
 │   └── projects.json       # Berkas data JSON portofolio untuk konsumsi Fetch API
-├── assets/
-│   └── images/             # Direktori aset ikon dan media pendukung
-├── SRS.md                  # Dokumen formal Software Requirements Specification (30 Poin)
-├── README.md               # Dokumentasi lengkap arsitektur dan instruksi proyek
-└── UTS Pemweb.pdf          # Berkas panduan & lembar soal tugas UTS
+├── SRS.md                  # Dokumen Spesifikasi Kebutuhan Perangkat Lunak (IEEE 830)
+├── README.md               # Dokumentasi lengkap proyek
+└── UTS Pemweb.pdf          # Berkas panduan & lembar soal UTS
 ```
 
 ---
 
-## 📑 Penjelasan Kriteria Penilaian
+## 📑 Pemenuhan Kriteria Penilaian UTS
 
 ### 1. Struktur HTML (Bobot: 20 Poin)
-Struktur dokumen dirancang mengikuti standar **HTML5 Semantik (W3C)** untuk memastikan aksesibilitas tinggi (*A11y*), keramahan mesin pencari (*SEO*), serta kemudahan perawatan kode:
-- **Elemen Semantik Modern:** Menggunakan `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<dialog>`, dan `<footer>` secara hierarkis tanpa penumpukan tag `<div>` yang tidak bermakna (*div-soup avoidance*).
-- **Header Informatif:** Elemen `<header>` memuat identitas merek (*Brand Logo*), navigasi utama, tombol pengalih tema visual, serta aksi cepat konsultasi.
-- **Navigasi Menu:** Terdapat 5 pilihan menu utama (`#beranda`, `#tentang`, `#layanan`, `#portofolio`, `#kontak`) yang melebihi batas minimum instruksi tugas (minimal 2 pilihan menu seperti *Beranda* dan *Tentang Kami*).
-- **Dukungan Aksesibilitas (ARIA):** Dilengkapi atribut `aria-label`, `aria-expanded`, `aria-hidden`, `aria-live="polite"`, dan `tabindex` agar ramah terhadap pembaca layar (*screen readers*) dan navigasi keyboard.
+- Menggunakan tag semantik standar HTML5: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<dialog>`, dan `<footer>`.
+- Navigasi menu utama (`Beranda`, `Tentang Kami`, `Portofolio`, `Kontak`) yang responsif, terstruktur, dan mudah dipahami.
+- Konten informatif yang rapi dengan pemisahan seksi yang jelas (*clean, semantic, high readability*).
 
 ---
 
-### 2. Desain CSS & Kreativitas Estetika (Bobot: 30 + 20 = 50 Poin)
-Tampilan antarmuka mengadopsi standar desain visual modern terkini (*State-of-the-Art*):
-- **CSS Custom Properties (Variables):** Seluruh variabel warna, bayangan (*shadow*), radius sudut, dan durasi transisi diatur pada root `:root` dan dikonfigurasi ulang secara otomatis pada selector `[data-theme="light"]`.
-- **Tema Ganda (Dark & Light Mode):** Tampilan bawaan bergaya *Dark Cyber Elegance* dengan palet warna yang nyaman di mata, serta dapat dialihkan ke *Clean Light Mode* melalui satu klik tombol.
-- **Konsep Glassmorphism:** Elemen kartu menggunakan properti `backdrop-filter: blur(14px)` dan latar belakang transparan semi-translusen bergaris tepi halus untuk menghasilkan ilusi kedalaman kaca modern.
-- **Tipografi Google Fonts:** Menggunakan *Plus Jakarta Sans* dengan variasi ketebalan bobot yang proporsional dan ukuran responsif berbasis fungsi CSS `clamp()`.
-- **Tata Letak Responsif (Mobile-First Ready):** Menggunakan kombinasi dinamis **CSS Grid** (untuk susunan kartu portofolio dan layanan) dan **Flexbox** (untuk bilah navigasi dan formulir).
-- **Micro-Animations & Keyframes:**
-  - Efek rotasi ikon brand saat *idle* (`@keyframes pulse-glow`).
-  - Animasi putaran *loading spinner* (`@keyframes spin`).
-  - Efek gemetar (*shake animation*) pada kartu form saat pengguna memasukkan data tidak valid (`@keyframes shakeAnim`).
-  - Transisi melayang lembut (*smooth elevate*) saat kursor diarahkan ke kartu portofolio (`transform: translateY(-8px)`).
+### 2. Desain CSS Modular & Estetika (Bobot: 30 + 20 = 50 Poin)
+- **Modular Architecture:** Kode CSS dibagi secara modular menjadi `css/layout.css` (tata letak & tema) dan `css/components.css` (komponen antarmuka), digabungkan rapi di `css/style.css`.
+- **Desain Estetis & Kreativitas:** Tipografi modern Google Fonts *Plus Jakarta Sans*, gradien warna aura, kartu fitur *glassmorphism* dengan `backdrop-filter: blur()`, kartu portofolio berbingkai glow halus, serta micro-interactions hover yang dinamis.
+- **CSS Variables & Multi-Theme:** Mendukung Dark Mode (default) dan Light Mode dengan transisi warna yang sangat halus dan kontras sesuai standar WCAG AA.
+- **Tata Letak Responsif:** Menggunakan **CSS Grid** untuk portofolio dan fitur serta **Flexbox** untuk navbar, filter controls, dan formulir, adaptif di semua resolusi.
 
 ---
 
-### 3. Fungsionalitas JavaScript (Bobot: 20 Poin)
-Seluruh 5 kriteria interaksi JavaScript yang tercantum di lembar instruksi tugas berhasil diimplementasikan secara komprehensif menggunakan **Vanilla JavaScript (tanpa pustaka pihak ketiga)**:
+### 3. Fungsionalitas JavaScript Modular (Bobot: 20 Poin)
+Semua 5 pilar instruksi tugas UTS diimplementasikan secara terpisah dan mudah dijelaskan:
 
-| No | Kriteria Interaksi | Lokasi Implementasi & Deskripsi Teknis |
-| :---: | :--- | :--- |
-| **1** | **Event Handling** | • Event `DOMContentLoaded` untuk inisialisasi aplikasi.<br>• Event `click` pada toggle tema, filter kategori, kartu proyek, modal close, dan menu hamburger mobile.<br>• Event `scroll` pada jendela peramban untuk mengaktifkan efek blur navbar, tombol *Back to Top*, dan fitur *Scroll Spy*.<br>• Event `input` dan `change` pada kolom formulir untuk validasi instan.<br>• Event `submit` pada formulir kontak.<br>• Event keyboard `keydown` (Enter/Spasi/Escape) untuk aksesibilitas modal dialog. |
-| **2** | **DOM Manipulation** | • Pembuatan elemen kartu portofolio secara dinamis menggunakan `document.createElement('article')` dan pengisian konten melalui `innerHTML`.<br>• Penyisipan elemen ke dokumen dengan `appendChild()` dan pembersihan container via penugasan `portfolioGrid.innerHTML = ""`.<br>• Manipulasi kelas CSS dinamis (`classList.add`, `classList.remove`, `classList.toggle`).<br>• Injeksi data dinamis ke elemen `<dialog>` saat pengguna memilih proyek.<br>• Pembuatan dan penghapusan elemen *Toast Notification* dinamis pada sudut layar. |
-| **3** | **Style & Animation** | • Pengubahan tema runtime dengan memanipulasi atribut `data-theme` pada elemen akar `<html>` serta penyimpanan status ke `localStorage`.<br>• Animasi penambahan angka metrik hero secara halus menggunakan perhitungan kurva *easing* berbasis `requestAnimationFrame()`.<br>• Animasi umpan balik getaran (*shake*) pada formulir saat submit gagal.<br>• Transisi opacity dan animasi *slide-in/slide-out* pada notifikasi toast. |
-| **4** | **Form Validation** | • **Nama Lengkap:** Pemeriksaan panjang karakter (minimal 3 karakter).<br>• **Alamat Email:** Pemeriksaan ekspresi reguler (Regex) standar RFC (`/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/`).<br>• **Pilihan Layanan:** Pemeriksaan status seleksi nilai dropdown.<br>• **Pesan:** Pemeriksaan panjang teks (minimal 10 karakter) dilengkapi **fitur penghitung karakter live** (*live character counter*).<br>• **Persetujuan:** Validasi centang kotak persetujuan.<br>• Umpan balik visual seketika berupa garis tepi hijau/merah (`.has-success` / `.has-error`), pesan kesalahan deskriptif, dan animasi tombol loading simulasi saat proses pengiriman. |
-| **5** | **AJAX / Fetch API** | • Mengambil data portofolio dari file eksternal `data/projects.json` secara asinkron menggunakan fungsi `async/await` dan `fetch()`.<br>• Pengelolaan status pemuatan (*Loading State*) dengan animasi pemutar (*spinner*).<br>• Penanganan kegagalan (*error handling*) terintegrasi menggunakan blok `try...catch` serta mekanisme cadangan otomatis (*Fallback System*) ke `FALLBACK_PROJECTS` (mencegah error CORS ketika dibuka langsung lewat protokol `file://`).<br>• Fitur tombol kutipan dinamis (*Quote Changer*) yang menyimulasikan pengambilan kutipan asinkron baru. |
+| No | Kriteria Tugas | Berkas Modul | Penjelasan Singkat Kodingan |
+| :---: | :--- | :--- | :--- |
+| **1** | **Event Handling** | `js/theme.js`, `js/portfolio.js`, `js/form.js`, `js/app.js` | • Event `click` pada tombol tema, menu navigasi mobile (`#navToggle`), filter kategori, kartu proyek, dan tombol close modal.<br>• Event `input` pada kolom pencarian proyek.<br>• Event `submit` pada formulir kontak. |
+| **2** | **DOM Manipulation** | `js/portfolio.js`, `js/app.js` | • Merender kartu portofolio ke elemen `#portfolioGrid` secara dinamis.<br>• Membuka dialog modal detail proyek dan mengisi kontennya sesuai ID proyek.<br>• Menampilkan dan menyembunyikan menu navigasi mobile secara responsif. |
+| **3** | **Style & Animation** | `js/theme.js` | • Mengganti class `light-theme` pada elemen `<body>` dan menyimpan preferensi ke `localStorage`.<br>• Efek transisi hover kartu portofolio dan modal backdrop. |
+| **4** | **Form Validation** | `js/form.js` | • Memeriksa panjang nama minimal 3 karakter.<br>• Memeriksa validitas format email menggunakan Regular Expression (Regex).<br>• Memeriksa pesan minimal 5 karakter.<br>• Menampilkan pesan error/sukses secara interaktif di `#formFeedback`. |
+| **5** | **AJAX / Fetch API** | `js/portfolio.js` | • Mengambil data `data/projects.json` menggunakan fungsi asinkron `fetch()`.<br>• Dilengkapi mekanisme fallback ke `FALLBACK_PROJECTS` dari `js/data.js` jika dijalankan secara offline via `file://`. |
 
 ---
 
 ### 4. Dokumentasi & SRS (Bobot: 30 Poin)
-- Dokumen **Software Requirements Specification (SRS)** telah disusun secara mandiri pada berkas [SRS.md](SRS.md) mengacu pada format standar IEEE 830.
-- Dokumen tersebut memuat Pendahuluan, Deskripsi Umum Sistem, Kebutuhan Fungsional (FR-01 s/d FR-10), Kebutuhan Non-Fungsional, Alur Data Arsitektur (*Flowchart Logika*), dan Kriteria Keberhasilan Pengujian.
+- Berkas [SRS.md](SRS.md) menyediakan spesifikasi lengkap kebutuhan sistem (fungsional & non-fungsional) berbasis standar IEEE 830.
 
 ---
 
-## 💻 Cara Menjalankan Proyek Secara Lokal
+## 🎤 Panduan Singkat Presentasi & Demo di Depan Dosen
 
-Tidak memerlukan instalasi dependensi rumit (zero-dependency). Anda dapat menjalankannya dengan beberapa metode:
+Jika dosen meminta Anda menunjukkan dan menjelaskan kodingan:
 
-### Cara 1: Menggunakan Peramban Langsung
-1. Buka folder proyek.
-2. Klik dua kali pada berkas `index.html` untuk langsung membukanya di Google Chrome, Firefox, atau Edge.
-   *(Sistem telah dilengkapi fallback data otomatis jika protokol `file://` membatasi Fetch API)*.
-
-### Cara 2: Menggunakan Local Web Server (Direkomendasikan untuk AJAX Penuh)
-Jika Anda memiliki Node.js atau Python terpasang di komputer:
-
-- **Menggunakan Python 3:**
-  ```bash
-  python3 -m http.server 8000
-  ```
-  Lalu buka peramban di alamat: `http://localhost:8000`
-
-- **Menggunakan Node.js / npx:**
-  ```bash
-  npx serve .
-  ```
-  Lalu buka alamat localhost yang tertera di terminal.
-
-- **Menggunakan VS Code Live Server:**
-  Klik kanan pada berkas `index.html` dan pilih **"Open with Live Server"**.
-
----
-
-## 🛡️ Pernyataan Integritas Akademik
-*Seluruh kode HTML, CSS, JavaScript, serta dokumen SRS dalam proyek ini disusun secara mandiri dan sistematis untuk memenuhi seluruh kriteria penilaian Ujian Tengah Semester (UTS) mata kuliah Pemrograman Web dengan menjunjung tinggi integritas akademik dan bebas dari plagiarisme.*
+1. **"Coba jelaskan kodingan AJAX-nya":**  
+   Buka berkas `js/portfolio.js` baris 10–19. Jelaskan bahwa fungsi `fetch("data/projects.json")` memuat data secara asinkron lalu memanggil `renderProjects(data)`.
+2. **"Di mana manipulasi DOM kartu dan modal?":**  
+   Buka berkas `js/portfolio.js` pada fungsi `renderProjects` (baris 21–38) dan fungsi `openDetail` (baris 61–72). Jelaskan bagaimana data dipetakan ke elemen HTML kartu dan dialog modal.
+3. **"Di mana validasi form?":**  
+   Buka berkas `js/form.js`. Tunjukkan pemeriksaan `name.length < 3`, regex `emailRegex.test(email)`, dan `message.length < 5`.
+4. **"Bagaimana mode tema (Dark/Light) bekerja?":**  
+   Buka berkas `js/theme.js`. Tunjukkan `document.body.classList.toggle("light-theme")` dan penyimpanan ke `localStorage.setItem("theme", ...)`.
+5. **"Bagaimana struktur CSS-nya?":**  
+   Tunjukkan bahwa CSS dipisah secara modular: `layout.css` untuk tata letak dan tema, serta `components.css` untuk tombol, kartu, dan formulir.
