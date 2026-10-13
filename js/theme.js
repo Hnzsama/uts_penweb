@@ -1,4 +1,4 @@
-function initTheme() {
+export function initTheme() {
   const toggleBtn = document.getElementById("themeToggle");
   const themeIcon = document.getElementById("themeIcon");
   const isLight = localStorage.getItem("theme") === "light";

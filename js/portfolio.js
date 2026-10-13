@@ -1,4 +1,6 @@
-function initPortfolio() {
+import { FALLBACK_PROJECTS } from "./data.js";
+
+export function initPortfolio() {
   let projects = [];
   const grid = document.getElementById("portfolioGrid");
   const searchInput = document.getElementById("searchInput");

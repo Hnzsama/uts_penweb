@@ -1,4 +1,4 @@
-function initNav() {
+export function initNav() {
   const navToggle = document.getElementById("navToggle");
   const navMenu = document.getElementById("navMenu");
 
@@ -23,10 +23,3 @@ function initNav() {
     }
   });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  initTheme();
-  initNav();
-  initPortfolio();
-  initForm();
-});

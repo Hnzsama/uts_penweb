@@ -1,4 +1,4 @@
-const FALLBACK_PROJECTS = [
+export const FALLBACK_PROJECTS = [
   {
     id: 1,
     title: "FinTech Banking App",
