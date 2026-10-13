@@ -58,6 +58,25 @@
   backdrop-filter: blur(8px);
 }
 
+.theme-svg-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+body:not(.light-theme) .theme-svg-icon {
+  filter: invert(1);
+}
+
+body.light-theme .theme-svg-icon {
+  filter: invert(0);
+}
+
+.theme-btn:hover .theme-svg-icon {
+  transform: rotate(20deg) scale(1.12);
+}
+
 .theme-btn:hover {
   border-color: var(--border-hover);
   transform: scale(1.06);
